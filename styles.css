@@ -1,0 +1,473 @@
+/* ============================================================
+   styles.css — El Portal de Champey · Menú QR Digital
+   Arquitectura Mobile-First · CSS puro sin frameworks
+   ============================================================ */
+
+/* ── 1. VARIABLES & RESET ─────────────────────────────────── */
+:root {
+  --primary-orange : #FFB300;
+  --primary-green  : #2E7D32;
+  --bg-color       : #FDFBF7;
+  --text-dark      : #333333;
+  --card-bg        : #FFFFFF;
+
+  /* Tokens de apoyo */
+  --orange-light   : #FFF8E1;
+  --green-light    : #E8F5E9;
+  --shadow-sm      : 0 2px 8px rgba(0,0,0,.08);
+  --shadow-md      : 0 4px 16px rgba(0,0,0,.12);
+  --radius         : 14px;
+  --nav-h          : 52px;
+  --transition     : .25s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* scroll-behavior lo gestiona JS para compatibilidad máxima */
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.55;
+  /* Espacio superior = alto de la navbar sticky */
+  padding-top: var(--nav-h);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul { list-style: none; }
+a  { text-decoration: none; color: inherit; }
+
+/* ── 2. HEADER ────────────────────────────────────────────── */
+.site-header {
+  background: linear-gradient(160deg, var(--primary-green) 0%, #1B5E20 100%);
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem 1.25rem 2rem;
+}
+
+.header-inner {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Logo: muestra emoji de fallback si la imagen no carga */
+.logo-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.logo-fallback {
+  font-size: 2.5rem;
+  position: absolute;
+  display: none;
+}
+
+.logo-wrapper.img-error .logo-fallback {
+  display: block;
+}
+
+.site-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  line-height: 1.2;
+}
+
+.site-subtitle {
+  font-size: .85rem;
+  opacity: .8;
+  margin-top: .35rem;
+  font-style: italic;
+}
+
+/* ── 3. STICKY NAVBAR ─────────────────────────────────────── */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-h);
+  background: var(--card-bg);
+  border-bottom: 2px solid var(--primary-green);
+  box-shadow: var(--shadow-sm);
+  overflow: visible;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: var(--nav-h);
+}
+
+.nav-toggle {
+  flex: 1;
+  height: var(--nav-h);
+  border: 0;
+  background: transparent;
+  color: var(--primary-green);
+  font: inherit;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.nav-toggle-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.nav-list {
+  display: none;
+  width: 100%;
+  max-height: calc(100vh - var(--nav-h));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: .75rem;
+  background: var(--card-bg);
+  border-top: 1px solid rgba(46,125,50,.18);
+  box-shadow: var(--shadow-md);
+}
+
+.sticky-nav.is-open .nav-list {
+  display: grid;
+  gap: .45rem;
+}
+
+.nav-toggle:focus-visible,
+.nav-link:focus-visible {
+  outline: 3px solid rgba(255,179,0,.55);
+  outline-offset: 2px;
+}
+
+.lang-btn {
+  flex-shrink: 0;
+  padding: 0 .9rem;
+  border: 0;
+  border-left: 1px solid rgba(46,125,50,.18);
+  background: transparent;
+  color: var(--primary-green);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.lang-btn:hover {
+  background: var(--green-light);
+}
+
+.lang-btn:focus-visible {
+  outline: 3px solid rgba(255,179,0,.55);
+  outline-offset: 2px;
+}
+
+.nav-link {
+  display: block;
+  padding: .7rem .95rem;
+  border-radius: 12px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: background var(--transition), color var(--transition);
+}
+
+.nav-link:hover {
+  background: var(--green-light);
+  color: var(--primary-green);
+}
+
+/* Estado activo: al hacer clic y al cruzar la sección */
+.nav-link.active {
+  background: var(--primary-green);
+  color: #fff;
+}
+
+/* ── 4. MAIN & SECCIONES ──────────────────────────────────── */
+.menu-main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.menu-section {
+  margin-bottom: 2.5rem;
+  /* Offset para que la navbar fija no tape el título */
+  scroll-margin-top: calc(var(--nav-h) + 12px);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  padding-bottom: .5rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 3px solid var(--primary-orange);
+  display: inline-block;
+}
+
+.section-note {
+  margin: -.35rem 0 1rem;
+  padding: .55rem .8rem;
+  border-left: 4px solid var(--primary-orange);
+  border-radius: 10px;
+  background: var(--orange-light);
+  color: var(--text-dark);
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+/* ── 5. TARJETAS DE PLATILLOS ─────────────────────────────── */
+.cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.menu-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: box-shadow var(--transition), transform var(--transition);
+  /* Accesibilidad: tarjeta como elemento interactivo */
+  cursor: default;
+}
+
+.menu-card:hover,
+.menu-card:focus-within {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Imagen de la tarjeta */
+.card-img-wrapper {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  background: var(--green-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Transición suave al cargar */
+  transition: transform .4s ease;
+}
+
+.menu-card:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* Placeholder visual cuando la imagen no existe */
+.card-img-wrapper::after {
+  content: '🌿';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  opacity: .5;
+  /* Se oculta cuando la imagen carga bien */
+  z-index: 0;
+}
+
+.card-img { position: relative; z-index: 1; }
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: .85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0; /* evita desbordamiento de texto */
+}
+
+.card-title {
+  font-size: .97rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: .3rem;
+  /* Truncar si es muy largo */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card-desc {
+  font-size: .78rem;
+  color: #666;
+  line-height: 1.45;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: .55rem;
+}
+
+.card-note {
+  align-self: flex-start;
+  margin-bottom: .55rem;
+  padding: .2rem .65rem;
+  border-radius: 999px;
+  background: var(--green-light);
+  color: var(--primary-green);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+/* Precio */
+.card-price {
+  align-self: flex-start;
+  display: inline-block;
+  background: var(--primary-orange);
+  color: #fff;
+  font-weight: 800;
+  font-size: .92rem;
+  padding: .22rem .75rem;
+  border-radius: 999px;
+  letter-spacing: .3px;
+}
+
+/* ── 6. FOOTER ────────────────────────────────────────────── */
+
+/* Garantiza que la sección Happy Hour tenga altura suficiente
+   para que el IntersectionObserver la detecte correctamente,
+   incluso cuando no tiene productos listados. */
+#happy-hour {
+  min-height: 80px;
+}
+
+.site-footer {
+  background: var(--primary-green);
+  color: rgba(255,255,255,.85);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: .82rem;
+  line-height: 1.8;
+}
+
+.footer-note {
+  opacity: .65;
+  font-size: .75rem;
+}
+
+/* ── 7. ACCESIBILIDAD — Movimiento reducido ───────────────── */
+/*
+ * Respeta la preferencia del sistema del usuario.
+ * Desactiva transiciones y animaciones para quienes tienen
+ * sensibilidad al movimiento (vértigo, epilepsia, etc.).
+ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── 8. RESPONSIVE — Pantallas ≥ 600 px ──────────────────── */
+@media (min-width: 600px) {
+  .site-title { font-size: 2rem; }
+
+  .menu-main  { padding: 2rem 1.5rem 4rem; }
+
+  .sticky-nav {
+    display: flex;
+    align-items: stretch;
+    overflow: visible;
+  }
+
+  .sticky-nav::-webkit-scrollbar { display: none; }
+
+  .nav-controls {
+    flex-shrink: 0;
+    width: auto;
+    height: var(--nav-h);
+  }
+
+  .nav-toggle { display: none; }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .nav-list,
+  .sticky-nav.is-open .nav-list {
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    height: 100%;
+    max-height: none;
+    padding: 0 .75rem;
+    white-space: nowrap;
+    border-top: 0;
+    box-shadow: none;
+    width: auto;
+  }
+
+  .nav-list::-webkit-scrollbar { display: none; }
+
+  .nav-link {
+    display: inline-block;
+    padding: .45rem .95rem;
+    border-radius: 999px;
+  }
+
+  /* En grid de 2 columnas, la tarjeta apila verticalmente */
+  .menu-card {
+    flex-direction: column;
+  }
+
+  .card-img-wrapper {
+    width: 100%;
+    height: 150px;
+  }
+}

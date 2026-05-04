@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Menú QR Digital - El Portal de Champey, hostal ecológico en la selva." />
+  <title>El Portal de Champey · Menú</title>
+  <meta name="theme-color" content="#2E7D32" />
+  <link rel="icon" href="ico/logoportal.ico" type="image/x-icon" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo placeholder -->
+      <div class="logo-wrapper">
+        <img
+          src="branding/logoportal.webp"
+          alt="Logo El Portal de Champey"
+          class="logo"
+          width="82"
+          height="82"
+        />
+        <span class="logo-fallback" aria-hidden="true">🌿</span>
+      </div>
+      <h1 class="site-title">El Portal de Champey</h1>
+      <p class="site-subtitle">Hostal Ecológico · Semuc Champey</p>
+    </div>
+  </header>
+
+  <!-- ===================== STICKY NAVBAR ===================== -->
+  <nav class="sticky-nav" id="stickyNav" aria-label="Categorías del menú">
+    <div class="nav-controls">
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="navMenu"
+        aria-label="Abrir o cerrar categorías del menú"
+      >
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <button type="button" class="lang-btn" id="lang-btn" aria-label="Switch language / Cambiar idioma">
+        <span class="lang-label">EN</span>
+      </button>
+    </div>
+    <ul class="nav-list" id="navMenu">
+      <li><a href="#desayunos"  class="nav-link active" data-section="desayunos">Desayuno/Cena</a></li>
+      <li><a href="#platos"     class="nav-link"        data-section="platos">Especiales de la casa</a></li>
+      <li><a href="#veggie"    class="nav-link"        data-section="veggie">Platos Vegetarianos</a></li>
+      <li><a href="#mariscos"    class="nav-link"        data-section="mariscos">Mariscos</a></li>
+      <li><a href="#burger"    class="nav-link"        data-section="burger">Hamburguesas</a></li>
+      <li><a href="#snacks"     class="nav-link"        data-section="snacks">Snacks</a></li>
+      <li><a href="#bebidas-frias"     class="nav-link" data-section="bebidas-frias">Bebidas Frías</a></li>
+      <li><a href="#bebidas-calientes" class="nav-link" data-section="bebidas-calientes">Bebidas Calientes</a></li>
+      <li><a href="#alcohol"            class="nav-link" data-section="alcohol">Alcohol</a></li>
+      <li><a href="#happy-hour"         class="nav-link" data-section="happy-hour">Happy Hour</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="menu-main">
+
+    <!-- -------- DESAYUNO / CENA -------- -->
+    <section class="menu-section" id="desayunos">
+      <h2 class="section-title">Desayuno / Cena</h2>
+      <div class="cards-grid">
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/huevos.webp" alt="Huevos al gusto" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">10.-Huevos al gusto </h3>
+            <p class="card-desc">Huevos revueltos con tomate y cebolla, estrellados, término medio, acompañados de frijoles y pan.</p>
+            <span class="card-price">Q50</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/omelette.webp" alt="Omelette" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">11.- Omelette</h3>
+            <p class="card-desc">Omelette con ingredientes frescos de la región, frijoles y pan tostado.</p>
+            <span class="card-price">Q50</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/panqueques-frutas.webp" alt="Panqueques con Frutas" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">12.- Panqueques con frutas</h3>
+            <p class="card-desc">Panqueques esponjosos acompañados de frutas frescas de la región y miel.</p>
+            <span class="card-price">Q50</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/cereal.webp" alt="Cereal" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">13.- Cereal </h3>
+            <p class="card-desc">Cereal con leche y frutas frescas de la región, perfecto para un desayuno ligero.</p>
+            <span class="card-price">Q48</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/yogur-granola.webp" alt="Yogur con Granola" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">14.- Yogur con Granola</h3>
+            <p class="card-desc">Yogur natural acompañado de granola y frutas frescas de la región, ideal para un desayuno saludable.</p>
+            <span class="card-price">Q55</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/pan-tostado.webp" alt="Pan Tostado con Jalea y Mantequilla" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">15.- Pan Tostado con Jalea y Mantequilla</h3>
+            <p class="card-desc">Pan tostado acompañado de jalea y mantequilla, ideal para un desayuno ligero.</p>
+            <span class="card-price">Q40</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- -------- ESPECIALES DE LA CASA -------- -->
+    <section class="menu-section" id="platos">
+      <h2 class="section-title">Especiales de la Casa</h2>
+      <div class="cards-grid">
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/pollo1.webp" alt="Pollo (Pechuga) a la plancha" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">1.- Pollo (Pechuga) a la plancha</h3>
+            <p class="card-desc">Pollo a la plancha acompañado con una guarnición de tu elección: puré de papas, pasta o ensalada.</p>
+            <span class="card-price">Q68</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/torta-espanola.webp" alt="Torta Española" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">2.- Torta Española</h3>
+            <p class="card-desc">Torta española tradicional con papas, carne a la plancha y ensalada.</p>
+            <span class="card-price">Q72</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/milanesa-pollo.webp" alt="Milanesa de Pollo" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body"> 
+            <h3 class="card-title">3.- Milanesa de Pollo</h3>
+            <p class="card-desc">Milanesa de pollo acompañada de puré de papas, pasta o ensalada.</p>
+            <span class="card-price">Q73</span>
+          </div>
+        </article>
+        
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/pasta-bolognesa.webp" alt="Pasta Bolognesa" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">4.- Pasta Bolognesa</h3>
+            <p class="card-desc">Pasta acompañada de salsa Bolognesa de carne, tomate y hierbas frescas.</p>
+            <span class="card-price">Q70</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/carne-plancha.webp" alt="Carne a la Plancha" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">5.- Carne a la plancha</h3>
+            <p class="card-desc">Carne a la plancha acompañada de puré de papas, pasta o ensalada.</p>
+            <span class="card-price">Q60</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- -------- PLATOS VEGETARIANOS -------- -->
+    <section class="menu-section" id="veggie">
+      <h2 class="section-title">Platos Vegetarianos</h2>
+      <div class="cards-grid">
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/curry-verduras.webp" alt="Fritata" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">7.-Fritata</h3>
+            <p class="card-desc">Fritata, torta de pasta con huevo y queso, estilo omelette, acompañado de ensalada fresca.</p>
+            <span class="card-price">Q85</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/tacos-hongos.webp" alt="Pasta Con Salsa de Tomate" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">8.- Pasta Con Salsa de Tomate</h3>
+            <p class="card-desc">Pasta acompañada de salsa de tomate casera con una ensalada fresca.</p>
+            <span class="card-price">Q75</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/ensalada-portal.webp" alt="Ensalada El Portal" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">9.- Ensalada El Portal</h3>
+            <p class="card-desc">Pepino, Lechuga, zanahoria, tomate , cebolla, queso y huevos, una ensalada fresca y saludable.</p>
+            <span class="card-price">Q80</span>
+          </div>
+        </article>
+
+
+<article class="menu-card">
+            <div class="card-img-wrapper">
+                <img src="assets/arroz-frijoles-ensalada.webp" alt="Arroz, Frijoles y Ensalada" class="card-img" loading="lazy" />
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">25.- Arroz, Frijoles y Ensalada</h3>
+                <p class="card-desc">Arroz, frijoles y una ensalada fresca, acompañados de una salsa fresca.</p>
+                <span class="card-price">Q78</span>
+            </div>
+        </article>  
+
+
+      </div>
+    </section>
+
+    <!-- -------- MARISCOS -------- -->
+    <section class="menu-section" id="mariscos">
+      <h2 class="section-title">Mariscos</h2>
+      <div class="cards-grid">
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/ceviche-camaron.webp" alt="Ceviche de Camarón" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Ceviche de Camarón / Mixto</h3>
+            <p class="card-desc">Elige entre nuestra opcion de Ceviche de camaron o mixto, en tamanos mediano y grande.</p>
+            <span class="card-price">(Q75/Q95) (Q80/Q100) (Mediano/Grande)</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/filete-pescado.webp" alt="Filete de Pescado" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Filete de Pescado</h3>
+            <p class="card-desc">Filete de pescado fresco empanizado o al ajillo, acompañado de arroz blanco y ensalada fresca.</p>
+            <span class="card-price">Q70</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/camarones.webp" alt="Camarones" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Camarones</h3>
+            <p class="card-desc">Empanizados o al Ajillo.</p>
+            <span class="card-price">Q90</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- -------- HAMBURGUESAS -------- -->
+    <section class="menu-section" id="burger">
+      <h2 class="section-title">Hamburguesas</h2>
+      <p class="section-note">Todas las hamburguesas incluyen gaseosa.</p>
+      <div class="cards-grid">
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/texas-burger.webp" alt="Texas Burger" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Texas Burger</h3>
+            <p class="card-desc">Torta de carne, tomate, cebolla, queso , jamon y papas fritas.</p>
+            <span class="card-note">Incluye gaseosa</span>
+            <span class="card-price">Q115</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/burger-veggie.webp" alt="Deli Burger" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Deli Burger</h3>
+            <p class="card-desc">Torta de carne, tomate, cebolla, queso, huevo y papas fritas.</p>
+            <span class="card-note">Incluye gaseosa</span>
+            <span class="card-price">Q100</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/deluxe-burger.webp" alt="Deluxe Burger" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Deluxe Burger</h3>
+            <p class="card-desc">Torta de carne, tomate, cebolla, queso y papas fritas.</p>
+            <span class="card-note">Incluye gaseosa</span>
+            <span class="card-price">Q105</span>
+          </div>
+        </article>
+
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/big-burger.webp" alt="Big Burger" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Big Burger</h3>
+            <p class="card-desc">Doble torta de carne, tomate, cebolla, queso y papas fritas.</p>       
+            <span class="card-note">Incluye gaseosa</span>
+            <span class="card-price">Q120</span>
+          </div>  
+        </article>
+
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/cheese-burger.webp" alt="Cheese Burger" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cheese Burger</h3>      
+            <p class="card-desc">Torta de carne, doble queso, cebolla, tomate y papas fritas.</p>
+            <span class="card-note">Incluye gaseosa</span>
+            <span class="card-price">Q110</span>
+          </div>
+        </article>
+
+      </div>
+    </section>  
+
+    <!-- -------- SNACKS -------- -->
+    <section class="menu-section" id="snacks">
+      <h2 class="section-title">Snacks</h2>
+      <div class="cards-grid">
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/pizza-del-portal.webp" alt="Pizza del Portal" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Pizza del Portal</h3>
+            <p class="card-desc">Deliciosa pizza artesanal con ingredientes frescos y locales, puedes comprar una porción individual (Q15) o una pizza completa.</p>
+            <span class="card-price">Q160</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/nachos-veggie.webp" alt="Nachos Veggie" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Nachos Veggie</h3>
+            <p class="card-desc">Nachos con queso, frijoles, guacamole, pico de gallo y jalapeños.</p>
+            <span class="card-price">Q45</span>
+          </div>
+        </article>
+
+         <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/nachos-carne.webp" alt="Nachos de Carne" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Nachos de Carne</h3>
+            <p class="card-desc">Nachos con carne, queso, frijoles, guacamole, pico de gallo y jalapeños.</p>
+            <span class="card-price">Q50</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/nachos-atun.webp" alt="Nachos con Atún" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Nachos con Atún</h3>
+            <p class="card-desc">Nachos con atún, queso, frijoles, guacamole, pico de gallo y jalapeños.</p>
+            <span class="card-price">Q50</span>
+          </div>
+
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/sandwich-pollo.webp" alt="Sandwich de Pollo" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Sandwich de Pollo</h3>
+            <p class="card-desc">Delicioso sandwich de pollo, lechuga, tomate y mayonesa casera.</p>
+            <span class="card-price">Q40</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/sandwich-veggie.webp" alt="Sandwich Veggie" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Sandwich Veggie</h3>
+            <p class="card-desc">Delicioso sandwich vegetariano con queso, lechuga, tomate y mayonesa casera.</p>
+            <span class="card-price">Q35</span>
+          </div>
+        </article>
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/sandwich-atun.webp" alt="Sandwich de Atún" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Sandwich de Atún</h3>
+            <p class="card-desc">Delicioso sandwich de atún, lechuga, tomate y mayonesa casera.</p>
+            <span class="card-price">Q40</span>
+          </div>
+        </article>
+
+      </div><!-- donde se cierra el div-grad de snacks -->
+    </section>
+
+    <!-- -------- BEBIDAS FRÍAS -------- -->
+    <section class="menu-section" id="bebidas-frias">
+      <h2 class="section-title">Bebidas Frías</h2>
+      <div class="cards-grid">
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/limonada-agua.webp" alt="Limonada con Agua" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Limonada con Agua</h3>
+            <p class="card-desc">Deliciosa limonada natural, refrescante y ligera.</p>
+            <span class="card-price">Q25</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/agua-300ml.webp" alt="Agua 300ml" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Agua 300ml</h3>
+            <span class="card-price">Q10</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/agua-2l.webp" alt="Agua 2L" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Agua 2L</h3>
+            <span class="card-price">Q25</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/gatorade.webp" alt="Gatorade" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Gatorade (Uva/Naranja/FruitPunch)</h3>
+            <span class="card-price">Q20</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/te-frio.webp" alt="Té Frío" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Té Frío (Frambuesa/Limón/Durazno)</h3>
+            <span class="card-price">Q18</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/coca-cola.webp" alt="Coca-Cola" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Coca-Cola</h3>
+            <span class="card-price">Q15</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/coca-cola-zero.webp" alt="Coca-Cola Zero" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Coca-Cola Zero</h3>
+            <span class="card-price">Q15</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- -------- BEBIDAS CALIENTES -------- -->
+    <section class="menu-section" id="bebidas-calientes">
+      <h2 class="section-title">Bebidas Calientes</h2>
+      <div class="cards-grid">
+        
+        
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/cafe.webp" alt="Café" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Café</h3>
+            <p class="card-desc">Café de altura tostado localmente. Disponible americano o con leche +Q3.</p>
+            <span class="card-price">Q12 +Q3 con leche</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+            <div class="card-img-wrapper">
+              <img src="assets/te-herbal.webp" alt="Té de Hierbas de la Selva" class="card-img" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Té de Hierbas de la Selva</h3>
+              <p class="card-desc">Té de hierbas naturales, relajante y aromático, puedes elegir con leche +Q3.</p>
+              <span class="card-price">Q12 +Q3 con leche</span>
+            </div>
+          </article>
+
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/chocolate-caliente.webp" alt="Chocolate Caliente" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Chocolate Caliente</h3>
+            <p class="card-desc">Cacao 100% orgánico de la región preparado con leche de coco, canela y piloncillo.</p>
+            <span class="card-price">Q35</span>
+          </div>
+        </article>
+
+
+
+
+      </div>
+    </section>
+
+    <!-- -------- ALCOHOL -------- -->
+    <section class="menu-section" id="alcohol">
+      <h2 class="section-title">Alcohol</h2>
+      <div class="cards-grid">
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/mojito.webp" alt="Mojito" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mojito</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/cuba-libre.webp" alt="Cuba Libre" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cuba Libre</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/tequila-sunrise.webp" alt="Tequila Sunrise" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Tequila Sunrise</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/a-dormir-juntitos.webp" alt="A dormir Juntitos" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">A dormir Juntitos</h3>
+            <span class="card-price">Q40</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/cafe-irlande.webp" alt="Cafe Irlande" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cafe Irlande</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/margarita.webp" alt="Margarita" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Margarita</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/pina-colada.webp" alt="Pina Colada" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Pina Colada</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/daiquiri.webp" alt="Daiquiri" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Daiquiri</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/copa-de-vino.webp" alt="Copa de Vino" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Copa de Vino</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/gallo.webp" alt="Gallo" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Gallo</h3>
+            <span class="card-price">Q25</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/michelada.webp" alt="Michelada" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Michelada</h3>
+            <span class="card-price">Q45</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/oasis.webp" alt="Oasis" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Oasis</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/caipirinha.webp" alt="Caipirinha" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Caipirinha</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/champey-drink.webp" alt="Champey Drink" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Champey Drink</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/screwdriver.webp" alt="Screwdriver" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Screwdriver</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/skydriver.webp" alt="Skydriver" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Skydriver</h3>
+            <span class="card-price">Q30</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-img-wrapper">
+            <img src="assets/molotov.webp" alt="Molotov" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Molotov</h3>
+            <span class="card-price">Q40</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- -------- HAPPY HOUR -------- -->
+    <section class="menu-section" id="happy-hour">
+      <h2 class="section-title">Happy Hour</h2>
+      <p class="section-note">Disponible a partir de las 7:00 PM.</p>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <p>El Portal de Champey &copy; 2026</p>
+    <p class="footer-note">Todos los precios en quetzales (QTZ). IVA incluido.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .catch((err) => console.error('Service Worker registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

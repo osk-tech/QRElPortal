@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Logs y temporales
+*.log
+*.tmp
+*.bak
+
+# Entornos
+.env
+.env.*

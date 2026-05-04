@@ -1,0 +1,24 @@
+{
+  "name": "El Portal de Champey · Menú",
+  "short_name": "El Portal",
+  "description": "Menú QR Digital - El Portal de Champey, hostal ecológico en la selva.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2E7D32",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "branding/logoportal.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "branding/logoportal.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "maskable"
+    }
+  ]
+}
