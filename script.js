@@ -305,6 +305,10 @@ const CARD_TRANSLATIONS_EN = {
     title: 'Shrimp',
     desc: 'Breaded or garlic-style.'
   },
+  'Camarones al Ajillo': {
+    title: 'Garlic Shrimp',
+    desc: 'Garlic shrimp sautéed in butter, garlic and fresh herbs, served with rice and fresh salad.'
+  },
   // HAMBURGUESAS
   'Texas Burger': {
     title: 'Texas Burger',
