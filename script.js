@@ -326,7 +326,7 @@ const CARD_TRANSLATIONS_EN = {
     title: 'Combo 4 – Big Burger',
     desc: 'Double beef patty, tomato, onion, cheese and fries.'
   },
-  'Combo 5 – Cheese Burger': {
+  'Combo 5 – Queso Burger': {
     title: 'Combo 5 – Cheese Burger',
     desc: 'Beef patty, double cheese, onion, tomato and fries.'
   },
