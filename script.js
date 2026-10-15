@@ -310,24 +310,24 @@ const CARD_TRANSLATIONS_EN = {
     desc: 'Garlic shrimp sautéed in butter, garlic and fresh herbs, served with rice and fresh salad.'
   },
   // HAMBURGUESAS
-  'Texas Burger': {
-    title: 'Texas Burger',
+  'Combo 1 – Texas Burger': {
+    title: 'Combo 1 – Texas Burger',
     desc: 'Beef patty, tomato, onion, cheese, ham and fries.'
   },
-  'Deli Burger': {
-    title: 'Deli Burger',
+  'Combo 2 – Deli Burger': {
+    title: 'Combo 2 – Deli Burger',
     desc: 'Beef patty, tomato, onion, cheese, egg and fries.'
   },
-  'Deluxe Burger': {
-    title: 'Deluxe Burger',
+  'Combo 3 – Deluxe Burger': {
+    title: 'Combo 3 – Deluxe Burger',
     desc: 'Beef patty, tomato, onion, cheese and fries.'
   },
-  'Big Burger': {
-    title: 'Big Burger',
+  'Combo 4 – Big Burger': {
+    title: 'Combo 4 – Big Burger',
     desc: 'Double beef patty, tomato, onion, cheese and fries.'
   },
-  'Cheese Burger': {
-    title: 'Cheese Burger',
+  'Combo 5 – Cheese Burger': {
+    title: 'Combo 5 – Cheese Burger',
     desc: 'Beef patty, double cheese, onion, tomato and fries.'
   },
   // SNACKS

@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v8';
+const CACHE_VERSION = 'v9';
 const CACHE_NAME = `portal-menu-${CACHE_VERSION}`;
 const IMAGE_CACHE = `portal-images-${CACHE_VERSION}`;
 const APP_SCOPE_URL = new URL(self.registration.scope);
